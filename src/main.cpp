@@ -302,7 +302,7 @@ void loop() {
                 // Przycisk Zaczep (lewy)
                 if (tx < 120 && ty >= 224) {
                     Serial.println("Sending Boris_Poke");
-                    Blynk.virtualWrite(V1, "Boris_Poke");
+                    Blynk.virtualWrite(V1, 1);
                     // Feedback wizualny
                     tft.fillRoundRect(4, 224, 112, 88, 10, TFT_WHITE);
                     tft.setTextFont(4);
@@ -310,6 +310,7 @@ void loop() {
                     tft.setCursor(22, 254);
                     tft.print("Zaczep");
                     delay(150);
+                    Blynk.virtualWrite(V1, 0);
                     drawButtons();
                 }
                 // Przycisk Przytul (prawy)
@@ -323,6 +324,7 @@ void loop() {
                     tft.setCursor(138, 254);
                     tft.print("Przytul");
                     delay(150);
+                    Blynk.virtualWrite(V2, 0);
                     drawButtons();
                 }
             }
