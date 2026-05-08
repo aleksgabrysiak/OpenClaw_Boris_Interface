@@ -50,8 +50,8 @@ Firmware dla ESP32-2432S028R ("Cheap Yellow Display") stanowiący fizyczny inter
 | Pin | Kierunek | Typ | Opis |
 |---|---|---|---|
 | V0 | OpenClaw → ESP | String | Tekst wiadomości |
-| V1 | ESP → OpenClaw | String `"Boris_Poke"` | Przycisk Zaczep |
-| V2 | ESP → OpenClaw | Int `1` | Przycisk Przytul |
+| V1 | ESP → OpenClaw | Int `1`→`0` (impuls) | Przycisk Zaczep — do odczytu przez OpenClaw |
+| V2 | ESP → OpenClaw | Int `1`→`0` (impuls) | Przycisk Przytul — do odczytu przez OpenClaw |
 | V3 | OpenClaw → ESP | Int 0–6 | Emocja twarzy |
 
 ## Konfiguracja przed pierwszym uruchomieniem
